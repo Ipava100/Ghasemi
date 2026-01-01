@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پذیرش قوانین</title>
+  <style>
+    body { font-family: Tahoma, Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; color: #333; }
+    .rules { background: #e9f7fe; padding: 15px; border-radius: 6px; margin: 20px 0; }
+    label { display: block; margin: 12px 0 5px; }
+    input[type="text"], input[type="tel"] { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    input[type="checkbox"] { margin-left: 8px; }
+    button { background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; width: 100%; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>پذیرش قوانین</h2>
+    <div class="rules">
+      <p>با ارسال این فرم، شما موافقت می‌کنید که اطلاعات شما (نام، نام خانوادگی، تلفن) جمع‌آوری و ذخیره شود.</p>
+    </div>
+
+    <form action="https://formspree.io/f/" method="POST">
+      <label>
+        <input type="checkbox" name="موافقت" required> من قوانین را خوانده و می‌پذیرم
+      </label>
+      <label for="name">نام:</label>
+      <input type="text" id="name" name="نام" required>
+      <label for="family">نام خانوادگی:</label>
+      <input type="text" id="family" name="نام_خانوادگی" required>
+      <label for="phone">شماره تلفن:</label>
+      <input type="tel" id="phone" name="تلفن" required placeholder="09123456789">
+      <button type="submit">تایید و ارسال</button>
+    </form>
+  </div>
+</body>
+</html>
